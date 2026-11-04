@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paiement en ligne — YOTTO GROUP | Mobile Money Côte d'Ivoire</title>
+<meta name="description" content="Payez vos prestations YOTTO GROUP en ligne : Wave, Orange Money, MTN MoMo, Moov Money, carte bancaire ou virement. FCFA (XOF).">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">YOTTO<span>GROUP</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#accueil">Accueil</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="https://www.facebook.com/profile.php?id=100063998702095" target="_blank" rel="noopener">📘 Facebook</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main class="pay-page">
+  <div class="container">
+    <div class="pay-wrapper">
+      <h1>💳 Paiement en ligne — YOTTO GROUP</h1>
+      <p class="pay-sub">Réglez votre prestation en toute sécurité depuis votre téléphone — en FCFA (XOF). Reçu envoyé par email / WhatsApp.</p>
+
+      <form id="payForm">
+        <div class="field">
+          <label for="service">Prestation</label>
+          <select id="service" required>
+            <option value="">— Choisissez une prestation —</option>
+            <option value="cm">Community management</option>
+            <option value="contenu">Création de contenu (visuels, reels)</option>
+            <option value="ads">Publicité Facebook & Instagram Ads</option>
+            <option value="web">Création de site internet</option>
+            <option value="seo">Référencement SEO</option>
+            <option value="branding">Branding / logo</option>
+            <option value="radio">📻 Web Radio & TV</option>
+            <option value="youtube">▶️ Création de chaîne YouTube</option>
+            <option value="autre" data-price="">Autre prestation (montant à convenir avec nous)</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="amount">Montant (FCFA)</label>
+          <input type="number" id="amount" min="1000" step="500" placeholder="Ex : 150000" required>
+        </div>
+
+        <div class="field">
+          <label>Moyen de paiement</label>
+          <div class="pay-methods" id="payMethods">
+            <div class="pay-method" data-method="wave"><span class="pm-icon">🌊</span><span class="pm-name">Wave</span><span class="pm-desc">Le plus rapide en CI</span></div>
+            <div class="pay-method" data-method="orange"><span class="pm-icon">🟠</span><span class="pm-name">Orange Money</span><span class="pm-desc">Couverture nationale</span></div>
+            <div class="pay-method" data-method="mtn"><span class="pm-icon">🟡</span><span class="pm-name">MTN MoMo</span><span class="pm-desc">Mobile Money</span></div>
+            <div class="pay-method" data-method="moov"><span class="pm-icon">🔵</span><span class="pm-name">Moov Money</span><span class="pm-desc">Frais réduits</span></div>
+            <div class="pay-method" data-method="card"><span class="pm-icon">💳</span><span class="pm-name">Carte bancaire</span><span class="pm-desc">Visa / Mastercard</span></div>
+            <div class="pay-method" data-method="virement"><span class="pm-icon">🏦</span><span class="pm-name">Virement</span><span class="pm-desc">Bancaire (RIB)</span></div>
+          </div>
+          <input type="hidden" id="method" required>
+        </div>
+
+        <div class="field" id="phoneField">
+          <label for="phone">Numéro Mobile Money</label>
+          <input type="tel" id="phone" placeholder="Ex : 07 XX XX XX XX" pattern="[0-9+ ]{8,15}">
+          <small style="color:#777">Un code USSD vous sera envoyé sur ce numéro pour valider le paiement.</small>
+        </div>
+
+        <div class="field">
+          <label for="name">Nom du client</label>
+          <input type="text" id="name" placeholder="Votre nom complet" required>
+        </div>
+
+        <div class="field">
+          <label for="email">Email ou WhatsApp (reçu de paiement)</label>
+          <input type="text" id="email" placeholder="vous@exemple.com ou 07 XX XX XX XX" required>
+        </div>
+
+        <div id="ussdBox"></div>
+        <button type="submit" class="btn btn-primary" style="width:100%;font-size:1.05rem">Valider le paiement</button>
+        <div id="payResult"></div>
+      </form>
+
+      <div class="pay-legal">
+        <p>🔒 Paiements sécurisés en FCFA (XOF) via des prestataires agréés (Paystack, CinetPay, Simiz…) couvrant Wave, Orange Money, MTN MoMo et Moov Money.</p>
+        <p>📞 Aide paiement : <a href="tel:+2250708522176">+225 07 08 52 21 76</a> · <a href="https://wa.me/2250708522176" target="_blank" rel="noopener">WhatsApp</a> · <a href="mailto:erickjohanna9@gmail.com">erickjohanna9@gmail.com</a> · <a href="https://www.facebook.com/profile.php?id=100063998702095" target="_blank" rel="noopener">Facebook — YOTTO GROUP</a> 📘</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <p class="copyright">© 2026 YOTTO GROUP — Abidjan, Côte d'Ivoire · Wave · Orange Money · MTN MoMo · Moov Money · Visa/Mastercard · Virement</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
